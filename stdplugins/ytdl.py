@@ -224,5 +224,5 @@ async def _(event):
     if not song:
         await event.edit("`Enter song name`")
         return
-    result = await message.client.inline_query("lybot", song)
+    result = await event.client.inline_query("lybot", song)
     await result[0].click(event.chat_id, reply_to=event.reply_to_msg_id, hide_via=True)
