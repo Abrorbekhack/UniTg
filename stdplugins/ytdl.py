@@ -21,6 +21,7 @@ from youtube_dl.utils import (DownloadError, ContentTooShortError,
 from asyncio import sleep
 from telethon.tl.types import DocumentAttributeAudio
 from uniborg.util import admin_cmd
+from telethon.tl.types import InputMessagesFilterMusic
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):
     """Generic progress_callback for uploads and downloads."""
