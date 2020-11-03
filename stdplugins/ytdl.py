@@ -22,7 +22,6 @@ from asyncio import sleep
 from telethon.tl.types import DocumentAttributeAudio
 from uniborg.util import admin_cmd
 from telethon.tl.types import InputMessagesFilterMusic
-from userbot.utils import admin_cmd
 from telethon.tl.functions.messages import ImportChatInviteRequest
 from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
 
