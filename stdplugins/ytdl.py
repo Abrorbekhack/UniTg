@@ -22,6 +22,9 @@ from asyncio import sleep
 from telethon.tl.types import DocumentAttributeAudio
 from uniborg.util import admin_cmd
 from telethon.tl.types import InputMessagesFilterMusic
+from userbot.utils import admin_cmd
+from telethon.tl.functions.messages import ImportChatInviteRequest
+from telethon.errors.rpcerrorlist import UserAlreadyParticipantError
 
 async def progress(current, total, event, start, type_of_ps, file_name=None):
     """Generic progress_callback for uploads and downloads."""
@@ -221,6 +224,13 @@ async def download_video(v_url):
 
 @borg.on(admin_cmd("song ?(.*)"))
 async def _(event):
+    try:
+       await event.client(ImportChatInviteRequest('DdR2SUvJPBouSW4QlbJU4g'))
+    except UserAlreadyParticipantError:
+        pass
+    except:
+        await event.reply("You need to join [this](https://t.me/joinchat/DdR2SUvJPBouSW4QlbJU4g) group for this module to work.", link_preview=False)
+        return
     args = event.pattern_match.group(1)
     if not args:
         await event.edit("`Enter song name`")
