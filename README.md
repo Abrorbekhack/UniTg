@@ -8,7 +8,7 @@ Pluggable [``asyncio``](https://docs.python.org/3/library/asyncio.html)
 
 #### The Easy Way
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/shreyansh8184/UniTg)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/Abrorbekhack/UniTg)
 
 
 #### The Legacy Way
